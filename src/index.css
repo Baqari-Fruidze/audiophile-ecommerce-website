@@ -11,3 +11,14 @@
 body {
   font-family: "Manrope", sans-serif;
 }
+
+.common {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
