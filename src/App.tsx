@@ -10,7 +10,12 @@ import {
   BrowserRouter,
   Routes,
 } from "react-router-dom";
-import Footer from "./pages/Footer";
+import { useLocation } from "react-router-dom";
+import Footer from "./components/Footer";
+import Category from "./pages/Category";
+import Product from "./pages/Product";
+import CheckOut from "./pages/CheckOut";
+import Person from "./components/Person";
 function App() {
   const {
     register,
@@ -23,7 +28,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
+        {location.pathname !== "/checkout" ? <Person /> : null}
         <Footer />
       </BrowserRouter>
     </>
