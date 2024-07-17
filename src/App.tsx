@@ -9,13 +9,19 @@ import {
   Link,
   BrowserRouter,
   Routes,
+  useLocation,
 } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
 import CheckOut from "./pages/CheckOut";
 import Person from "./components/Person";
+
+function StaticPerson() {
+  const location = useLocation();
+  return location.pathname !== "/checkout" ? <Person /> : null;
+}
+
 function App() {
   const {
     register,
@@ -32,7 +38,7 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/checkout" element={<CheckOut />} />
         </Routes>
-        {location.pathname !== "/checkout" ? <Person /> : null}
+        <StaticPerson />
         <Footer />
       </BrowserRouter>
     </>
