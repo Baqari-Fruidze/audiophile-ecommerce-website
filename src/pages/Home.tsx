@@ -1,9 +1,10 @@
 import React from "react";
+import HomePageList from "../components/HomePageList";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-red-600 text-[40px]">olaa</h1>
+      <HomePageList />
     </div>
   );
 }

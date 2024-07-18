@@ -518,5 +518,25 @@
         }
       }
     ]
+  },
+  {
+    "id": 7,
+    "info": [
+      {
+        "name": "earphones",
+        "text": "SHOP",
+        "source": "/assets/shared/desktop/image-category-thumbnail-earphones.png"
+      },
+      {
+        "name": "headphones",
+        "source": "/assets/shared/desktop/image-category-thumbnail-headphones.png",
+        "text": "SHOP"
+      },
+      {
+        "name": "speakers",
+        "text": "SHOP",
+        "source": "/assets/shared/desktop/image-category-thumbnail-speakers.png"
+      }
+    ]
   }
 ]
