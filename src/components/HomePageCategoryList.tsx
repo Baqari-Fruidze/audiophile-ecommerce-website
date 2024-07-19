@@ -2,14 +2,14 @@ import React from "react";
 import data from "../data.json";
 import arrowRight from "/assets/shared/desktop/icon-arrow-right.svg";
 
-export default function HomePageList() {
+export default function HomePageCategoryList() {
   return (
     <div className="parent flex flex-col  items-center px-[24px] gap-[60px] mb-[120px] mt-[70px] ">
       {
         <>
           {data[data.length - 1].info?.map((item) => {
             return (
-              <div className="flex flex-col items-center w-full bg-[#F1F1F1] rounded-[8px] pb-[15px] ">
+              <div className="flex flex-col items-center w-full bg-[#F1F1F1] rounded-[8px] pb-[15px]  ">
                 <img
                   src={item.source}
                   alt=""
