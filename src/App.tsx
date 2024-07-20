@@ -16,6 +16,7 @@ import Category from "./pages/Category";
 import Product from "./pages/Product";
 import CheckOut from "./pages/CheckOut";
 import Person from "./components/Person";
+import Header from "./components/Header";
 
 function StaticPerson() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/category" element={<Category />} />

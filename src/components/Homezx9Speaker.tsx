@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import speakerMobile from "/assets/home/mobile/image-speaker-zx9.png";
+import circles from "/assets/home/desktop/pattern-circles.svg";
 
 export default function Homezx9Speaker() {
   return (
-    <div className="parent bg-[#D87D4A] rounded-[8px] py-[55px] px-[23px] w-full flex flex-col items-center gap-[32px]">
+    <div className="parent bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-cover bg-[center_top_-140px] bg-no-repeat bg-[#D87D4A] rounded-[8px] py-[55px] px-[23px] w-full flex flex-col items-center gap-[32px]">
       <img src={speakerMobile} alt="" className="w-[172px]  h-[207px]" />
       <div className="flex flex-col items-center gap-[24px]">
         <h1 className="text-[36px] text-[#fff] font-bold tracking-[1.25px] uppercase text-center w-[7ch] leading-[40px]">
