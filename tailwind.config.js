@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "custom-bg": "url('/assets/home/mobile/image-speaker-zx7.jpg')",
+      },
+    },
   },
   plugins: [],
 };
