@@ -1,13 +1,11 @@
 import React from "react";
-import burger from "/assets/shared/tablet/icon-hamburger.svg";
-import kalata from "/assets/shared/desktop/icon-cart.svg";
 import { useLocation } from "react-router-dom";
 
 export default function Header() {
   const location = useLocation();
   return (
     <div className="bg-[#191919] ">
-      <hr className="absolute top-[95px] border-[1px] border-[solid] border-[white] w-full opacity-[0.104]" />
+      <hr className="absolute top-[95px] border-[1px] border-solid border-[white] w-full opacity-[0.104]" />
       <div className="py-[37px] px-[24px] flex justify-between items-center">
         <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
           <g fill="#FFF" fill-rule="evenodd">
