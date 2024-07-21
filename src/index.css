@@ -10,6 +10,7 @@
 }
 body {
   font-family: "Manrope", sans-serif;
+  background: #fafafa;
 }
 
 .common {
@@ -20,5 +21,15 @@ body {
   font-weight: 700;
   line-height: 25px; /* 192.308% */
   letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.HTwo {
+  color: #d87d4a;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 192.308% */
+  letter-spacing: 0.929px;
   text-transform: uppercase;
 }

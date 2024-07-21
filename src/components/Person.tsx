@@ -11,7 +11,7 @@ export default function Person() {
   );
   const desktop = useMediaQuery("only screen and (min-width : 1440px)");
   return (
-    <div className="parent flex flex-col gap-[32px] items-center px-[24px]">
+    <div className="parent flex flex-col gap-[32px] items-center px-[24px] mb-[120px]">
       <img
         src={mobile ? personMobile : tablet ? personTablet : personDesktop}
         alt=""

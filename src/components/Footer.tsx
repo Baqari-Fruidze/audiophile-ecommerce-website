@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] mt-[120px]">
+    <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] ">
       <hr className="w-[101px] h-[4px] bg-[#D87D4A]" />
       <div className=" audiophileCon flex flex-col gap-[48px] ">
         <svg
