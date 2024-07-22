@@ -2,7 +2,7 @@ import React from "react";
 
 export default function BillingDetails() {
   return (
-    <div>
+    <div className="mb-[32px]">
       <h2 className="HTwoInCheckout">billing details</h2>
       <div className="flex flex-col gap-[24px]">
         <div className=" NameAndEmailAdressCon flex flex-col gap-[24px]">
