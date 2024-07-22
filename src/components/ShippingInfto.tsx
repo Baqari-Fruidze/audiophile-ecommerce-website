@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ShippingInfto() {
   return (
-    <div>
+    <div className="mb-[32px]">
       <h2 className="HTwoInCheckout">shipping info</h2>
       <div className="InputsCon flex flex-col gap-[24px]">
         <div className="flex flex-col gap-[9px]">
