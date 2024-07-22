@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { createContext, useState } from "react";
 import Home from "./pages/Home";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -17,12 +18,16 @@ import Product from "./pages/Product";
 import CheckOut from "./pages/CheckOut";
 import Person from "./components/Person";
 import Header from "./components/Header";
+import { TuserContext } from "./types/ContextType";
 
 function StaticPerson() {
   const location = useLocation();
   return location.pathname !== "/checkout" ? <Person /> : null;
 }
-
+export const Context = createContext<TuserContext>({
+  yellow: true,
+  setYellow: () => {},
+});
 function App() {
   const {
     register,
@@ -30,8 +35,9 @@ function App() {
     watch,
     formState: { errors },
   } = useForm();
+  const [yellow, setYellow] = useState<boolean>(true);
   return (
-    <>
+    <Context.Provider value={{ yellow, setYellow }}>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -43,7 +49,7 @@ function App() {
         <StaticPerson />
         <Footer />
       </BrowserRouter>
-    </>
+    </Context.Provider>
   );
 }
 
