@@ -13,7 +13,7 @@ body {
   background: #fafafa;
 }
 
-.common {
+.linksFooter {
   color: #fff;
   font-family: Manrope;
   font-size: 13px;
@@ -23,7 +23,7 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.HTwo {
+.HTwoInCheckout {
   color: #d87d4a;
   font-family: Manrope;
   font-size: 13px;
@@ -32,4 +32,29 @@ body {
   line-height: 25px; /* 192.308% */
   letter-spacing: 0.929px;
   text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.InputsLabelsInCheckout {
+  color: #000;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.214px;
+}
+.InputStyles {
+  color: #000;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  opacity: 0.4;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 24px;
 }
