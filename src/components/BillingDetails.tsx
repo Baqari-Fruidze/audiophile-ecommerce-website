@@ -1,12 +1,11 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 export default function BillingDetails() {
   const {
     register,
     formState: { errors },
-  } = useForm();
-  console.log(errors.name);
+  } = useFormContext();
   return (
     <div className="mb-[32px]">
       <h2 className="HTwoInCheckout">billing details</h2>
@@ -17,7 +16,7 @@ export default function BillingDetails() {
             <input
               type="text"
               id="Name"
-              className={`InputStyles border-[1px] border-[solid] ${
+              className={`InputStyles border-[1px] border-solid ${
                 errors.name ? "border-[red]" : "border-[#CFCFCF]"
               }`}
               placeholder="Alexei Ward"
@@ -29,7 +28,9 @@ export default function BillingDetails() {
             <input
               type="text"
               id="EmailAddress"
-              className="InputStyles"
+              className={`InputStyles border-[1px] border-solid ${
+                errors.EmailAddress ? "border-[red]" : "border-[#CFCFCF]"
+              }`}
               placeholder="alexei@mail.com"
               {...register("EmailAddress")}
             />
@@ -40,7 +41,9 @@ export default function BillingDetails() {
           <input
             type="text"
             id="phoneNumber"
-            className="InputStyles"
+            className={`InputStyles border-[1px] border-solid ${
+              errors.phoneNumber ? "border-[red]" : "border-[#CFCFCF]"
+            }`}
             placeholder="alexei@mail.com"
             {...register("phoneNumber")}
           />

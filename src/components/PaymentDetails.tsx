@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import Circle from "./Circle";
 import { Context } from "../App";
 import CashONDeliverySpan from "./CashONDeliverySpan";
-import { useForm } from "react-hook-form";
+import { useForm, useFormContext } from "react-hook-form";
 
 export default function PaymentDetails() {
   const { yellow, setYellow } = useContext(Context);
-  const { register } = useForm();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <div>
       <h2 className="HTwoInCheckout">payment details</h2>
@@ -25,7 +28,9 @@ export default function PaymentDetails() {
             <input
               type="text"
               id="e-Money"
-              className="hidden"
+              className={` hidden  border-[1px] border-solid ${
+                errors.eMoney ? "border-[red]" : "border-[#CFCFCF]"
+              }`}
               {...register("eMoney")}
             />
             <label
@@ -37,7 +42,9 @@ export default function PaymentDetails() {
             <input
               type="text"
               id="CashonDelivery"
-              className="hidden"
+              className={` hidden  border-[1px] border-solid ${
+                errors.CashonDelivery ? "border-[red]" : "border-[#CFCFCF]"
+              }`}
               {...register("CashonDelivery")}
             />
           </div>
@@ -54,7 +61,9 @@ export default function PaymentDetails() {
                   type="text"
                   placeholder="238521993"
                   id="e-MoneyNumber"
-                  className="InputStyles"
+                  className={`InputStyles border-[1px] border-solid ${
+                    errors.eMoneyNumber ? "border-[red]" : "border-[#CFCFCF]"
+                  }`}
                   {...register("eMoneyNumber")}
                 />
               </div>
@@ -66,7 +75,9 @@ export default function PaymentDetails() {
                   type="text"
                   placeholder="6891"
                   id="e-MoneyPIN"
-                  className="InputStyles"
+                  className={`InputStyles border-[1px] border-solid ${
+                    errors.eMoneyPIN ? "border-[red]" : "border-[#CFCFCF]"
+                  }`}
                   {...register("eMoneyPIN")}
                 />
               </div>

@@ -1,8 +1,11 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useFormContext } from "react-hook-form";
 
 export default function ShippingInfto() {
-  const { register } = useForm();
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <div className="mb-[32px]">
       <h2 className="HTwoInCheckout">shipping info</h2>
@@ -14,7 +17,9 @@ export default function ShippingInfto() {
           <input
             type="text"
             id="YourAddress"
-            className="InputStyles"
+            className={`InputStyles border-[1px] border-solid ${
+              errors.address ? "border-[red]" : "border-[#CFCFCF]"
+            }`}
             placeholder="1137 Williams Avenue"
             {...register("address")}
           />
@@ -27,7 +32,9 @@ export default function ShippingInfto() {
             <input
               type="text"
               id="ZIPCode"
-              className="InputStyles"
+              className={`InputStyles border-[1px] border-solid ${
+                errors.zipCode ? "border-[red]" : "border-[#CFCFCF]"
+              }`}
               placeholder="10001"
               {...register("zipCode")}
             />
@@ -39,7 +46,9 @@ export default function ShippingInfto() {
             <input
               type="text"
               id="City"
-              className="InputStyles"
+              className={`InputStyles border-[1px] border-solid ${
+                errors.city ? "border-[red]" : "border-[#CFCFCF]"
+              }`}
               placeholder="New York"
               {...register("city")}
             />
@@ -52,7 +61,9 @@ export default function ShippingInfto() {
           <input
             type="text"
             id="Country"
-            className="InputStyles"
+            className={`InputStyles border-[1px] border-solid ${
+              errors.country ? "border-[red]" : "border-[#CFCFCF]"
+            }`}
             placeholder="United States"
             {...register("country")}
           />

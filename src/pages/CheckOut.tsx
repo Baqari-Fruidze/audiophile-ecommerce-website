@@ -11,13 +11,17 @@ import PaymentDetails from "../components/PaymentDetails";
 
 export default function CheckOut() {
   const methods = useForm({ resolver: yupResolver(schema) });
+  const { handleSubmit } = methods;
+  const foo = (data) => {
+    console.log(data);
+  };
   return (
     <FormProvider {...methods}>
       <div className="parent pt-[16px] pb-[32px] px-[24px]">
         <Link className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 ">
           Go Back
         </Link>
-        <form>
+        <form onSubmit={handleSubmit(foo)}>
           <div className="flex flex-col">
             <div className="inputsCon mt-[24px] bg-[#fff] pt-[24px] pb-[32px] px-[24px]">
               <h1 className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase mb-[32px]">
