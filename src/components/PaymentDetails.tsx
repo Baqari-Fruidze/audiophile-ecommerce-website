@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import Circle from "./Circle";
 import { Context } from "../App";
+import CashONDeliverySpan from "./CashONDeliverySpan";
 
 export default function PaymentDetails() {
   const { yellow, setYellow } = useContext(Context);
-
+  console.log(yellow);
   return (
     <div>
       <h2 className="HTwoInCheckout">payment details</h2>
@@ -29,8 +30,40 @@ export default function PaymentDetails() {
             </label>
             <input type="text" name="" id="CashonDelivery" className="hidden" />
           </div>
+          {yellow ? (
+            <div className="moneyPinMoneyNumberCon flex flex-col gap-[24px]">
+              <div className="flex flex-col gap-[9px]">
+                <label
+                  htmlFor="e-MoneyNumber"
+                  className="InputsLabelsInCheckout"
+                >
+                  e-Money Number
+                </label>
+                <input
+                  type="text"
+                  placeholder="238521993"
+                  name=""
+                  id="e-MoneyNumber"
+                  className="InputStyles"
+                />
+              </div>
+              <div className="flex flex-col gap-[9px]">
+                <label htmlFor="e-MoneyPIN" className="InputsLabelsInCheckout">
+                  e-Money PIN
+                </label>
+                <input
+                  type="text"
+                  placeholder="6891"
+                  id="e-MoneyPIN"
+                  className="InputStyles"
+                />
+              </div>
+            </div>
+          ) : null}
+          <span></span>
         </div>
       </div>
+      {yellow ? null : <CashONDeliverySpan />}
     </div>
   );
 }
