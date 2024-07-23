@@ -10,7 +10,7 @@ import ShippingInfto from "../components/ShippingInfto";
 import PaymentDetails from "../components/PaymentDetails";
 
 export default function CheckOut() {
-  const methods = useForm();
+  const methods = useForm({ resolver: yupResolver(schema) });
   return (
     <FormProvider {...methods}>
       <div className="parent pt-[16px] pb-[32px] px-[24px]">

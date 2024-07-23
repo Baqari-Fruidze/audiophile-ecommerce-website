@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import Circle from "./Circle";
 import { Context } from "../App";
 import CashONDeliverySpan from "./CashONDeliverySpan";
+import { useForm } from "react-hook-form";
 
 export default function PaymentDetails() {
   const { yellow, setYellow } = useContext(Context);
-  console.log(yellow);
+  const { register } = useForm();
   return (
     <div>
       <h2 className="HTwoInCheckout">payment details</h2>
@@ -21,14 +22,24 @@ export default function PaymentDetails() {
             >
               <Circle yellow={yellow} setYellow={setYellow} /> e-Money
             </label>
-            <input type="text" name="" id="e-Money" className="hidden" />
+            <input
+              type="text"
+              id="e-Money"
+              className="hidden"
+              {...register("eMoney")}
+            />
             <label
               htmlFor="CashonDelivery"
               className="InputStyles flex items-center gap-[16px] "
             >
               <Circle yellow={!yellow} setYellow={setYellow} /> Cash on Delivery
             </label>
-            <input type="text" name="" id="CashonDelivery" className="hidden" />
+            <input
+              type="text"
+              id="CashonDelivery"
+              className="hidden"
+              {...register("CashonDelivery")}
+            />
           </div>
           {yellow ? (
             <div className="moneyPinMoneyNumberCon flex flex-col gap-[24px]">
@@ -42,9 +53,9 @@ export default function PaymentDetails() {
                 <input
                   type="text"
                   placeholder="238521993"
-                  name=""
                   id="e-MoneyNumber"
                   className="InputStyles"
+                  {...register("eMoneyNumber")}
                 />
               </div>
               <div className="flex flex-col gap-[9px]">
@@ -56,6 +67,7 @@ export default function PaymentDetails() {
                   placeholder="6891"
                   id="e-MoneyPIN"
                   className="InputStyles"
+                  {...register("eMoneyPIN")}
                 />
               </div>
             </div>

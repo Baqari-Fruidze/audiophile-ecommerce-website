@@ -1,6 +1,8 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 export default function ShippingInfto() {
+  const { register } = useForm();
   return (
     <div className="mb-[32px]">
       <h2 className="HTwoInCheckout">shipping info</h2>
@@ -14,6 +16,7 @@ export default function ShippingInfto() {
             id="YourAddress"
             className="InputStyles"
             placeholder="1137 Williams Avenue"
+            {...register("address")}
           />
         </div>
         <div className="zipcodeAndCityCon flex flex-col gap-[24px]">
@@ -26,6 +29,7 @@ export default function ShippingInfto() {
               id="ZIPCode"
               className="InputStyles"
               placeholder="10001"
+              {...register("zipCode")}
             />
           </div>
           <div className="flex flex-col gap-[9px]">
@@ -37,6 +41,7 @@ export default function ShippingInfto() {
               id="City"
               className="InputStyles"
               placeholder="New York"
+              {...register("city")}
             />
           </div>
         </div>
@@ -49,6 +54,7 @@ export default function ShippingInfto() {
             id="Country"
             className="InputStyles"
             placeholder="United States"
+            {...register("country")}
           />
         </div>
       </div>
