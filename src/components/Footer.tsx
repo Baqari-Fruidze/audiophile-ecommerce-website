@@ -19,10 +19,19 @@ export default function Footer() {
           />
         </svg>
         <div className="items flex flex-col gap-[16px] items-center">
-          <Link className={`linksFooter`}>Home</Link>
-          <Link className={`linksFooter`}> HEADPHONES</Link>
-          <Link className={`linksFooter`}>SPEAKERS</Link>
-          <Link className={`linksFooter`}>EARPHONES</Link>
+          <Link to={`/home`} className={`linksFooter`}>
+            Home
+          </Link>
+          <Link to={`/headphones`} className={`linksFooter`}>
+            {" "}
+            HEADPHONES
+          </Link>
+          <Link to={`/speakers`} className={`linksFooter`}>
+            SPEAKERS
+          </Link>
+          <Link to={`/earphones`} className={`linksFooter`}>
+            EARPHONES
+          </Link>
         </div>
       </div>
       <div className="textAndIconCon  flex flex-col gap-[48px]">

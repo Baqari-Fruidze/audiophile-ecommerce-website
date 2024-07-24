@@ -15,7 +15,7 @@ export default function Person() {
       <img
         src={mobile ? personMobile : tablet ? personTablet : personDesktop}
         alt=""
-        className="rounded-[8px]"
+        className="rounded-[8px] w-full"
       />
       <div className="flex flex-col gap-[32px] ">
         <p className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase text-center ">

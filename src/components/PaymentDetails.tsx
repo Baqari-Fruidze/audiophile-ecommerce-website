@@ -21,30 +21,26 @@ export default function PaymentDetails() {
           <div className="moneyInputs flex flex-col gap-[16px]">
             <label
               htmlFor="e-Money"
-              className="InputStyles flex gap-[16px] items-center"
+              className="InputStyles flex gap-[16px] items-center border-[1px] border-solid border-[#CFCFCF]"
             >
               <Circle yellow={yellow} setYellow={setYellow} /> e-Money
             </label>
             <input
               type="text"
               id="e-Money"
-              className={` hidden  border-[1px] border-solid ${
-                errors.eMoney ? "border-[red]" : "border-[#CFCFCF]"
-              }`}
+              className={` hidden   `}
               {...register("eMoney")}
             />
             <label
               htmlFor="CashonDelivery"
-              className="InputStyles flex items-center gap-[16px] "
+              className="InputStyles flex items-center gap-[16px] border-[1px] border-solid border-[#CFCFCF] "
             >
               <Circle yellow={!yellow} setYellow={setYellow} /> Cash on Delivery
             </label>
             <input
               type="text"
               id="CashonDelivery"
-              className={` hidden  border-[1px] border-solid ${
-                errors.CashonDelivery ? "border-[red]" : "border-[#CFCFCF]"
-              }`}
+              className={` hidden `}
               {...register("CashonDelivery")}
             />
           </div>

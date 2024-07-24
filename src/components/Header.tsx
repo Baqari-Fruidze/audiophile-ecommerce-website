@@ -1,8 +1,8 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Header() {
-  const location = useLocation();
+  const category = useParams();
   return (
     <div className="bg-[#191919] ">
       <hr className="absolute top-[95px] border-[1px] border-solid border-[white] w-full opacity-[0.104]" />
@@ -27,13 +27,6 @@ export default function Header() {
           />
         </svg>
       </div>
-      {location.pathname === "/category" ? (
-        <div className="py-[32px]">
-          <h1 className="text-[28px] text-[#fff] text-center font-bold tracking-[2px]">
-            test
-          </h1>
-        </div>
-      ) : null}
     </div>
   );
 }
