@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/:category" element={<Category />} />
-          <Route path="/product" element={<ProductDetail />} />
+          <Route path="/:category/:product" element={<ProductDetail />} />
           <Route path="/checkout" element={<CheckOut />} />
         </Routes>
         <StaticPerson />
