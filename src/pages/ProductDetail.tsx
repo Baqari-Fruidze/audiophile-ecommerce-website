@@ -4,11 +4,12 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import HomePageCategoryList from "../components/HomePageCategoryList";
 import DetailsTopSection from "../components/DetailsTopSection";
+import FeaturesAndInTheCart from "../components/FeaturesAndInTheCart";
 
 export default function ProductDetail() {
   const { product } = useParams();
   const navigate = useNavigate();
-  const dataToShow = data.find((item) => item.name === product);
+  const dataToShow = data?.find((item) => item.name === product);
   return (
     <div className="parent pt-[16px]">
       <button
@@ -17,8 +18,9 @@ export default function ProductDetail() {
       >
         go back
       </button>
-      <div>
+      <div className="flex flex-col gap-[88px]">
         <DetailsTopSection dataToShow={dataToShow} />
+        <FeaturesAndInTheCart dataToShow={dataToShow} />
         <HomePageCategoryList />
       </div>
     </div>

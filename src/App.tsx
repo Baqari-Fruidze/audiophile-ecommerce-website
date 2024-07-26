@@ -17,11 +17,14 @@ function StaticPerson() {
 export const Context = createContext<TuserContext>({
   yellow: true,
   setYellow: () => {},
+  count: 1,
+  setCount: () => {},
 });
 function App() {
   const [yellow, setYellow] = useState<boolean>(true);
+  const [count, setCount] = useState<number>(1);
   return (
-    <Context.Provider value={{ yellow, setYellow }}>
+    <Context.Provider value={{ yellow, setYellow, count, setCount }}>
       <BrowserRouter>
         <Header />
         <Routes>

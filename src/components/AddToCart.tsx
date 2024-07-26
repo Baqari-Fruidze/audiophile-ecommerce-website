@@ -1,0 +1,33 @@
+import React from "react";
+import { Product } from "../types/SingleObjType";
+import { useContext } from "react";
+import { Context } from "../App";
+
+export default function AddToCart({ dataToShow }: { dataToShow: Product }) {
+  const { count, setCount } = useContext(Context);
+  return (
+    <div className="flex flex-col gap-[31px]">
+      <span className="text-[#000] text-[18px] font-bold tracking-[1.286px]">
+        ${dataToShow.price}
+      </span>
+      <div className="flex gap-[16px] w-[90%] ">
+        <div className="bg-[#F1F1F1] w-[45%] px-[15px] py-[14px] flex justify-between">
+          <span className="text-[13px] text-[#000] font-bold tracking-[1px] opacity-25">
+            -
+          </span>
+          <span className="text-[13px] text-[#000] font-bold tracking-[1px]">
+            {count}
+          </span>
+          <span className="text-[13px] text-[#000] font-bold tracking-[1px] opacity-25">
+            +
+          </span>
+        </div>
+        <div className="w-[50%] bg-[#D87D4A] flex items-center justify-center ">
+          <span className="text-[#fff] text-[13px] font-bold tracking-[1px] ">
+            ADD TO CART
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
