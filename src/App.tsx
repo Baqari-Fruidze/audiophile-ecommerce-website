@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import { TuserContext } from "./types/ContextType";
 import ProductDetail from "./pages/ProductDetail";
 import data from "../src/data.json";
+import { Tlist } from "./types/List";
 
 function StaticPerson() {
   const location = useLocation();
@@ -17,14 +18,14 @@ function StaticPerson() {
 export const Context = createContext<TuserContext>({
   yellow: true,
   setYellow: () => {},
-  count: 1,
-  setCount: () => {},
+  list: [],
+  setList: () => {},
 });
 function App() {
   const [yellow, setYellow] = useState<boolean>(true);
-  const [count, setCount] = useState<number>(1);
+  const [list, setList] = useState<Tlist[]>([]);
   return (
-    <Context.Provider value={{ yellow, setYellow, count, setCount }}>
+    <Context.Provider value={{ yellow, setYellow, list, setList }}>
       <BrowserRouter>
         <Header />
         <Routes>
