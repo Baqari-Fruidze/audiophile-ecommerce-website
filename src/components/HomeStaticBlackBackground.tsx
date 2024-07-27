@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function HomeStaticBlackBackground() {
   return (
-    <div className=" bg-[url('/assets/home/mobile/image-header.jpg')]  bg-cover bg-[center_top_-90px] py-[108px] flex flex-col items-center px-[24px] mb-[90px]">
+    <div className=" bg-[url('/assets/home/mobile/image-header.jpg')]  bg-cover bg-[center_top_-90px] py-[108px] flex flex-col items-center px-[24px] mb-[90px] md:bg-[url('/assets/home/tablet/image-header.jpg')] ">
       <span className="text-[14px] text-[#fff] font-light tracking-[10px] uppercase opacity-[0.4964] mb-[14px]">
         NEW PRODUCT
       </span>

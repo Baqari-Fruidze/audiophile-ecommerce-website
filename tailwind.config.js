@@ -6,6 +6,9 @@ export default {
       backgroundImage: {
         "custom-bg": "url('/assets/home/mobile/image-speaker-zx7.jpg')",
       },
+      screens: {
+        des: "1440px",
+      },
     },
   },
   plugins: [],

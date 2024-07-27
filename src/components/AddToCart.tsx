@@ -10,7 +10,7 @@ export default function AddToCart({ dataToShow }: { dataToShow: Product }) {
   return (
     <div className="flex flex-col gap-[31px]">
       <span className="text-[#000] text-[18px] font-bold tracking-[1.286px]">
-        ${dataToShow.price * c}
+        ${dataToShow.price * count}
       </span>
       <div className="flex gap-[16px] w-[90%] ">
         <div className="bg-[#F1F1F1] w-[45%] px-[15px] py-[14px] flex justify-between">

@@ -1,11 +1,16 @@
 import React from "react";
 import { Product } from "../types/SingleObjType";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function FeaturesAndInTheCart({
   dataToShow,
 }: {
   dataToShow: Product;
 }) {
+  const mobile = useMediaQuery("only screen and (max-width : 768px)");
+  const tablet = useMediaQuery(
+    "only screen and (min-width : 769px) and (max-width : 1439px)"
+  );
   return (
     <div className="flex flex-col gap-[88px] px-[24px]">
       <div className="features flex flex-col gap-[24px]">
@@ -38,19 +43,37 @@ export default function FeaturesAndInTheCart({
       <div className="ImagesCon flex flex-col gap-[24px]">
         <div className="twoImagesCon flex  flex-col gap-[24px]">
           <img
-            src={dataToShow.gallery.first.mobile}
+            src={
+              mobile
+                ? dataToShow.gallery.first.mobile
+                : tablet
+                ? dataToShow.gallery.first.tablet
+                : dataToShow.gallery.first.desktop
+            }
             alt=""
             className="rounded-[8px]"
           />
           <img
-            src={dataToShow.gallery.second.mobile}
+            src={
+              mobile
+                ? dataToShow.gallery.second.mobile
+                : tablet
+                ? dataToShow.gallery.second.tablet
+                : dataToShow.gallery.second.desktop
+            }
             alt=""
             className="rounded-[8px]"
           />
         </div>
         <div>
           <img
-            src={dataToShow.gallery.third.mobile}
+            src={
+              mobile
+                ? dataToShow.gallery.third.mobile
+                : tablet
+                ? dataToShow.gallery.third.tablet
+                : dataToShow.gallery.third.desktop
+            }
             alt=""
             className="rounded-[8px]"
           />

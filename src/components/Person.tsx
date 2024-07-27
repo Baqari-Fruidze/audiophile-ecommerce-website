@@ -1,19 +1,21 @@
 import React from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import personMobile from "/assets/shared/mobile/image-best-gear.jpg";
-import personTablet from "/assets/shared/tablet/image-best-gear.jpg";
-import personDesktop from "/assets/shared/desktop/image-best-gear.jpg";
 
 export default function Person() {
   const mobile = useMediaQuery("only screen and (max-width : 768px)");
   const tablet = useMediaQuery(
-    "only screen and (min-width : 768px) and (max-width : 1440px)"
+    "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
-  const desktop = useMediaQuery("only screen and (min-width : 1440px)");
   return (
     <div className="parent flex flex-col gap-[32px] items-center px-[24px] mb-[120px]">
       <img
-        src={mobile ? personMobile : tablet ? personTablet : personDesktop}
+        src={
+          mobile
+            ? "/assets/shared/mobile/image-best-gear.jpg"
+            : tablet
+            ? "/assets/shared/tablet/image-best-gear.jpg"
+            : "/assets/shared/desktop/image-best-gear.jpg"
+        }
         alt=""
         className="rounded-[8px] w-full"
       />

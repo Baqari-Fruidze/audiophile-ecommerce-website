@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Circle from "./Circle";
 import { Context } from "../App";
 import CashONDeliverySpan from "./CashONDeliverySpan";
-import { useForm, useFormContext } from "react-hook-form";
+import { useFormContext } from "react-hook-form";
 
 export default function PaymentDetails() {
   const { yellow, setYellow } = useContext(Context);

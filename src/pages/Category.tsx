@@ -4,10 +4,15 @@ import { Link } from "react-router-dom";
 import data from "../data.json";
 import HeaderCategory from "../components/HeaderCategory";
 import HomePageCategoryList from "../components/HomePageCategoryList";
+import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function Category() {
   const { category } = useParams();
   const dataToMap = data.filter((el) => el.category === category).reverse();
+  const mobile = useMediaQuery("only screen and (max-width : 768px)");
+  const tablet = useMediaQuery(
+    "only screen and (min-width : 769px) and (max-width : 1439px)"
+  );
 
   return (
     <div>
@@ -18,7 +23,13 @@ export default function Category() {
             <div className="flex flex-col gap-[32px]" key={index}>
               <div className="bg-[#F1F1F1] rounded-[8px] flex items-center justify-center">
                 <img
-                  src={item.categoryImage?.mobile}
+                  src={
+                    mobile
+                      ? item.categoryImage?.mobile
+                      : tablet
+                      ? item.categoryImage?.tablet
+                      : item.categoryImage?.desktop
+                  }
                   alt=""
                   className="rounded-[8px]"
                 />

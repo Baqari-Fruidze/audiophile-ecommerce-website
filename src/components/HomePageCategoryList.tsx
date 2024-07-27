@@ -1,7 +1,6 @@
 import React from "react";
 import data from "../data.json";
 import { Link } from "react-router-dom";
-
 export default function HomePageCategoryList() {
   return (
     <div className="parent flex flex-col  items-center px-[24px] gap-[60px] mb-[120px] mt-[70px] ">
