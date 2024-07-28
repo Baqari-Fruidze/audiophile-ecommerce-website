@@ -13,8 +13,8 @@ export default function DetailsTopSection({
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="flex flex-col px-[24px] gap-[40px]">
-      <div className="flex justify-center items-center bg-[#F1F1F1]">
+    <div className="w-full flex flex-col px-[24px] gap-[40px] md:px-[40px] md:flex-row md:gap-[69.5px]  ">
+      <div className=" min-h-[100vh]flex justify-center  bg-[#F1F1F1] md:w-[155%]">
         <img
           src={
             mobile
@@ -27,7 +27,7 @@ export default function DetailsTopSection({
           className=""
         />
       </div>
-      <div className="flex flex-col gap-[24px]">
+      <div className="flex flex-col gap-[24px] md:gap-[10%] ">
         {dataToShow.new ? (
           <h1 className="text-[#D87D4A] text-[14px] font-normal tracking-[10px] uppercase">
             NEW PRODUCT

@@ -17,10 +17,10 @@ export default function Category() {
   return (
     <div>
       <HeaderCategory category={category} />
-      <div className="bg-[#FAFAFA] pt-[64px] pb-[120px] px-[24px] flex flex-col gap-[120px]">
+      <div className="bg-[#FAFAFA] pt-[64px] pb-[120px] px-[24px] flex flex-col gap-[120px] md:pt-[120px] md:px-[40px]">
         {dataToMap.map((item, index) => {
           return (
-            <div className="flex flex-col gap-[32px]" key={index}>
+            <div className="flex flex-col gap-[32px] md:gap-[52px]" key={index}>
               <div className="bg-[#F1F1F1] rounded-[8px] flex items-center justify-center">
                 <img
                   src={
@@ -40,7 +40,7 @@ export default function Category() {
                     NEW PRODUCT
                   </h1>
                 ) : null}
-                <p className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase text-center">
+                <p className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase text-center md:text-[40px] md:tracking-[1.429px] md:leading-[44px]">
                   {item.name}
                 </p>
                 <p className="text-[#000] text-[15px] font-normal text-center leading-[25px] opacity-50">

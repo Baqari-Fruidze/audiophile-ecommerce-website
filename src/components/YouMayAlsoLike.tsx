@@ -13,14 +13,17 @@ export default function YouMayAlsoLike({
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="flex flex-col gap-[40px] px-[24px] items-center">
+    <div className="flex flex-col gap-[40px] px-[24px] items-center md:gap-[56px] md:px-[40px]">
       <h1 className="text-[24px] text-[#000] font-bold tracking-[0.857px] leading-[36px]">
         you may also like
       </h1>
-      <div className="flex flex-col gap-[56px]">
+      <div className="flex flex-col gap-[56px] md:flex-row md:gap-[11px]">
         {dataToShow.others.map((el, index) => {
           return (
-            <div className="flex flex-col gap-[32px] items-center" key={index}>
+            <div
+              className="flex flex-col gap-[32px] items-center md:gap-[35px]"
+              key={index}
+            >
               <div className="bg-[#F1F1F1] rounded-[8px] flex items-center justify-center">
                 <img
                   src={

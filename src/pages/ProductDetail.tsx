@@ -13,14 +13,14 @@ export default function ProductDetail() {
   const navigate = useNavigate();
   const dataToShow = data?.find((item) => item.name === product) as Product;
   return (
-    <div className="parent pt-[16px]">
+    <div className="parent pt-[16px] md:pt-[33px]">
       <button
         onClick={() => navigate(-1)}
-        className="text-[#000] text-[15px] font-normal opacity-50 ml-[24px] mb-[24px]"
+        className="text-[#000] text-[15px] font-normal opacity-50 ml-[24px] mb-[24px] md:ml-[40px]"
       >
         go back
       </button>
-      <div className="flex flex-col gap-[88px]">
+      <div className="flex flex-col gap-[88px] md:gap-[120px]">
         <DetailsTopSection dataToShow={dataToShow} />
         <FeaturesAndInTheCart dataToShow={dataToShow} />
         <YouMayAlsoLike dataToShow={dataToShow} />
