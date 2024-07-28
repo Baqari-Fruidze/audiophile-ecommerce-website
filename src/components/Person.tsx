@@ -7,7 +7,7 @@ export default function Person() {
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="parent flex flex-col gap-[32px] items-center px-[24px] mb-[120px]">
+    <div className="parent flex flex-col gap-[32px] items-center px-[24px] mb-[120px] md:px-[40px] md:gap-[63px] md:mb-[96px]">
       <img
         src={
           mobile
@@ -20,9 +20,9 @@ export default function Person() {
         className="rounded-[8px] w-full"
       />
       <div className="flex flex-col gap-[32px] ">
-        <p className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase text-center ">
+        <p className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase text-center md:text-[40px] md:leading-[44px] md:tracking-[1.429px] ">
           Bringing you the <br />
-          <span className="text-[#D87D4A] text-[28px] font-bold tracking-[1px] uppercase">
+          <span className="text-[#D87D4A] text-[28px] font-bold tracking-[1px] uppercase md:text-[40px] md:leading-[44px] md:tracking-[1.429px]">
             best
           </span>{" "}
           audio gear

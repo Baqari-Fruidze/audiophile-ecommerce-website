@@ -3,7 +3,7 @@ import data from "../data.json";
 import { Link } from "react-router-dom";
 export default function HomePageCategoryList() {
   return (
-    <div className="parent flex flex-col  items-center px-[24px] gap-[60px] mb-[120px] mt-[70px] ">
+    <div className="parent flex flex-col  items-center px-[24px] gap-[80px] mb-[120px] mt-[70px] md:flex-row md:px-[40px] md:gap-[2%] md:mb-[96px] md:mt-[80px] ">
       {
         <>
           {data[data.length - 1].info?.map((item, index) => {
@@ -25,7 +25,7 @@ export default function HomePageCategoryList() {
                   {item.name}
                 </h1>
                 <Link to={`/${item.name}`}>
-                  <div className="flex gap-[13px] items-center">
+                  <div className="flex gap-[13px] items-center md:gap-[22px]">
                     <span className="text-[#000] text-[13px] font-bold tracking-[1.071px] uppercase opacity-50">
                       {item.text}
                     </span>

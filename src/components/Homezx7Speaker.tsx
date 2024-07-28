@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Homezx7Speaker() {
   return (
-    <div className="bg-[url('/assets/home/mobile/image-speaker-zx7.jpg')] bg-cover bg-center w-full py-[101px] pl-[24px] rounded-[8px] md:bg-[url('/assets/home/tablet/image-speaker-zx7.jpg')] des:bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]">
+    <div className="bg-[url('/assets/home/mobile/image-speaker-zx7.jpg')] bg-cover bg-center w-full py-[101px] pl-[24px] rounded-[8px] md:bg-[url('/assets/home/tablet/image-speaker-zx7.jpg')] md:pl-[63px] des:bg-[url('/assets/home/desktop/image-speaker-zx7.jpg')]">
       <h1 className="text-[28px] text-[#000] font-bold tracking-[2px] uppercase mb-[32px]">
         ZX7 SPEAKER
       </h1>

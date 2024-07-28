@@ -9,7 +9,7 @@ export default function HomeYX1Earphones() {
   );
 
   return (
-    <div className="flex flex-col items-center gap-[24px] w-full ">
+    <div className="flex flex-col  gap-[24px] w-full md:flex-row ">
       <img
         src={
           mobile
@@ -19,9 +19,9 @@ export default function HomeYX1Earphones() {
             : "/assets/home/desktop/image-earphones-yx1.jpg"
         }
         alt=""
-        className="rounded-[8px] w-full"
+        className="rounded-[8px] w-full md:w-[50%]"
       />
-      <div className="bg-[#F1F1F1] py-[41px] pl-[24px] w-full rounded-[8px]">
+      <div className="bg-[#F1F1F1] py-[41px] pl-[24px] w-full rounded-[8px] md:py-[101px] md:pl-[42px]">
         <h1 className="text-[28px] text-[#000] font-bold tracking-[2px] uppercase mb-[32px]">
           YX1 EARPHONES
         </h1>
