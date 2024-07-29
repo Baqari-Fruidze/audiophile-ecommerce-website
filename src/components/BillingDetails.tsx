@@ -7,12 +7,14 @@ export default function BillingDetails() {
     formState: { errors },
   } = useFormContext();
   return (
-    <div className="mb-[32px]">
+    <div className="mb-[32px] md:mb-[53px]">
       <h2 className="HTwoInCheckout">billing details</h2>
       <div className="flex flex-col gap-[24px]">
-        <div className=" NameAndEmailAdressCon flex flex-col gap-[24px]">
-          <div className="flex flex-col gap-[9px]">
-            <label htmlFor="Name">Name</label>
+        <div className=" NameAndEmailAdressCon flex flex-col gap-[24px] md:flex-row md:w-full">
+          <div className="flex flex-col gap-[9px] md:w-full">
+            <label htmlFor="Name" className="InputsLabelsInCheckout">
+              Name
+            </label>
             <input
               type="text"
               id="Name"
@@ -23,8 +25,10 @@ export default function BillingDetails() {
               {...register("name")}
             />
           </div>
-          <div className="flex flex-col gap-[9px]">
-            <label htmlFor="EmailAddress">Email Address</label>
+          <div className="flex flex-col gap-[9px] md:w-full">
+            <label htmlFor="EmailAddress" className="InputsLabelsInCheckout">
+              Email Address
+            </label>
             <input
               type="text"
               id="EmailAddress"
@@ -37,14 +41,16 @@ export default function BillingDetails() {
           </div>
         </div>
         <div className="PhonenumberCon flex flex-col gap-[9px]">
-          <label htmlFor="">Phone Number</label>
+          <label htmlFor="phoneNumber" className="InputsLabelsInCheckout">
+            Phone Number
+          </label>
           <input
             type="text"
             id="phoneNumber"
             className={`InputStyles border-[1px] border-solid ${
               errors.phoneNumber ? "border-[red]" : "border-[#CFCFCF]"
             }`}
-            placeholder="alexei@mail.com"
+            placeholder="+1 202-555-0136"
             {...register("phoneNumber")}
           />
         </div>

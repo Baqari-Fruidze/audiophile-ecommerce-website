@@ -15,38 +15,41 @@ export default function PaymentDetails() {
       <h2 className="HTwoInCheckout">payment details</h2>
       <div className="inputsCon">
         <div className="paymentmethodAndMoneyInputsCon flex flex-col gap-[17px]">
-          <span className="text-[#000] text-[12px] font-bold tracking-[-0.214px]">
-            Payment Method
-          </span>
-          <div className="moneyInputs flex flex-col gap-[16px]">
-            <label
-              htmlFor="e-Money"
-              className="InputStyles flex gap-[16px] items-center border-[1px] border-solid border-[#CFCFCF]"
-            >
-              <Circle yellow={yellow} setYellow={setYellow} /> e-Money
-            </label>
-            <input
-              type="text"
-              id="e-Money"
-              className={` hidden   `}
-              {...register("eMoney")}
-            />
-            <label
-              htmlFor="CashonDelivery"
-              className="InputStyles flex items-center gap-[16px] border-[1px] border-solid border-[#CFCFCF] "
-            >
-              <Circle yellow={!yellow} setYellow={setYellow} /> Cash on Delivery
-            </label>
-            <input
-              type="text"
-              id="CashonDelivery"
-              className={` hidden `}
-              {...register("CashonDelivery")}
-            />
+          <div className="moneyInputs flex flex-col gap-[16px] md:flex-row md:justify-between">
+            <span className="text-[#000] text-[12px] font-bold tracking-[-0.214px]">
+              Payment Method
+            </span>
+            <div className="flex flex-col gap-[16px] md:w-1/2">
+              <label
+                htmlFor="e-Money"
+                className="InputStyles flex gap-[16px] items-center border-[1px] border-solid border-[#CFCFCF]"
+              >
+                <Circle yellow={yellow} setYellow={setYellow} /> e-Money
+              </label>
+              <input
+                type="text"
+                id="e-Money"
+                className={` hidden   `}
+                {...register("eMoney")}
+              />
+              <label
+                htmlFor="CashonDelivery"
+                className="InputStyles flex items-center gap-[16px] border-[1px] border-solid border-[#CFCFCF] "
+              >
+                <Circle yellow={!yellow} setYellow={setYellow} /> Cash on
+                Delivery
+              </label>
+              <input
+                type="text"
+                id="CashonDelivery"
+                className={` hidden `}
+                {...register("CashonDelivery")}
+              />
+            </div>
           </div>
           {yellow ? (
-            <div className="moneyPinMoneyNumberCon flex flex-col gap-[24px]">
-              <div className="flex flex-col gap-[9px]">
+            <div className="moneyPinMoneyNumberCon flex flex-col gap-[24px] md:flex-row md:gap-[16px]">
+              <div className="flex flex-col gap-[9px] md:w-full">
                 <label
                   htmlFor="e-MoneyNumber"
                   className="InputsLabelsInCheckout"
@@ -63,7 +66,7 @@ export default function PaymentDetails() {
                   {...register("eMoneyNumber")}
                 />
               </div>
-              <div className="flex flex-col gap-[9px]">
+              <div className="flex flex-col gap-[9px] md:w-full">
                 <label htmlFor="e-MoneyPIN" className="InputsLabelsInCheckout">
                   e-Money PIN
                 </label>
@@ -79,7 +82,6 @@ export default function PaymentDetails() {
               </div>
             </div>
           ) : null}
-          <span></span>
         </div>
       </div>
       {yellow ? null : <CashONDeliverySpan />}

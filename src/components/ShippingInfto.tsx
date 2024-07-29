@@ -7,7 +7,7 @@ export default function ShippingInfto() {
     formState: { errors },
   } = useFormContext();
   return (
-    <div className="mb-[32px]">
+    <div className="mb-[32px] md:mb-[61px]">
       <h2 className="HTwoInCheckout">shipping info</h2>
       <div className="InputsCon flex flex-col gap-[24px]">
         <div className="flex flex-col gap-[9px]">
@@ -24,8 +24,8 @@ export default function ShippingInfto() {
             {...register("address")}
           />
         </div>
-        <div className="zipcodeAndCityCon flex flex-col gap-[24px]">
-          <div className="flex flex-col gap-[9px]">
+        <div className="zipcodeAndCityCon flex flex-col gap-[24px] md:flex-row md:gap-[16px]">
+          <div className="flex flex-col gap-[9px] md:w-full">
             <label htmlFor="ZIPCode" className="InputsLabelsInCheckout">
               ZIP Code
             </label>
@@ -39,7 +39,7 @@ export default function ShippingInfto() {
               {...register("zipCode")}
             />
           </div>
-          <div className="flex flex-col gap-[9px]">
+          <div className="flex flex-col gap-[9px] md:w-full">
             <label htmlFor="City" className="InputsLabelsInCheckout">
               City
             </label>
@@ -54,7 +54,7 @@ export default function ShippingInfto() {
             />
           </div>
         </div>
-        <div className="flex flex-col gap-[9px]">
+        <div className="flex flex-col gap-[9px] md:w-1/2">
           <label htmlFor="Country" className="InputsLabelsInCheckout">
             Country
           </label>
