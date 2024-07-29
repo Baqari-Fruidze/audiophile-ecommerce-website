@@ -4,9 +4,19 @@ import { useContext } from "react";
 import { Context } from "../App";
 import { useState } from "react";
 
-export default function AddToCart({ dataToShow }: { dataToShow: Product }) {
+export default function AddToCart({
+  dataToShow,
+  product,
+}: {
+  dataToShow: Product;
+  product: string;
+}) {
   const { list, setList } = useContext(Context);
   const [count, setCount] = useState<number>(1);
+  const byuItem = () => {
+    setList((prev) => ({ ...prev, [product]: count }));
+  };
+  console.log(list);
   return (
     <div className="flex flex-col gap-[31px]">
       <span className="text-[#000] text-[18px] font-bold tracking-[1.286px]">
@@ -30,7 +40,10 @@ export default function AddToCart({ dataToShow }: { dataToShow: Product }) {
             +
           </span>
         </div>
-        <div className="w-[50%] bg-[#D87D4A] flex items-center justify-center ">
+        <div
+          className="w-[50%] bg-[#D87D4A] flex items-center justify-center  "
+          onClick={byuItem}
+        >
           <span className="text-[#fff] text-[13px] font-bold tracking-[1px] ">
             ADD TO CART
           </span>

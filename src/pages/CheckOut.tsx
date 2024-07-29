@@ -17,7 +17,7 @@ export default function CheckOut() {
   };
   return (
     <FormProvider {...methods}>
-      <div className="parent pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px]">
+      <div className="parent pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px]">
         <Link className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 ">
           Go Back
         </Link>

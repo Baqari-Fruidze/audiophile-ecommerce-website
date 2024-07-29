@@ -5,15 +5,17 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 
 export default function DetailsTopSection({
   dataToShow,
+  product,
 }: {
   dataToShow: Product;
+  product: string;
 }) {
   const mobile = useMediaQuery("only screen and (max-width : 768px)");
   const tablet = useMediaQuery(
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="w-full flex flex-col px-[24px] gap-[40px] md:px-[40px] md:flex-row md:gap-[69.5px]  ">
+    <div className="w-full flex flex-col px-[24px] gap-[40px] md:px-[40px] md:flex-row md:gap-[69.5px] md:items-center ">
       <div className=" min-h-[100vh]flex justify-center  bg-[#F1F1F1] md:w-[155%]">
         <img
           src={
@@ -27,7 +29,7 @@ export default function DetailsTopSection({
           className=""
         />
       </div>
-      <div className="flex flex-col gap-[24px] md:gap-[10%] ">
+      <div className="flex flex-col gap-[24px] md:gap-[32px] ">
         {dataToShow.new ? (
           <h1 className="text-[#D87D4A] text-[14px] font-normal tracking-[10px] uppercase">
             NEW PRODUCT
@@ -39,7 +41,7 @@ export default function DetailsTopSection({
         <p className="text-[15px] text-[#000] font-normal leading-[25px] opacity-50">
           {dataToShow.description}
         </p>
-        <AddToCart dataToShow={dataToShow} />
+        <AddToCart dataToShow={dataToShow} product={product} />
       </div>
     </div>
   );

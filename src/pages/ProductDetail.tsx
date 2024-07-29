@@ -12,6 +12,7 @@ export default function ProductDetail() {
   const { product } = useParams();
   const navigate = useNavigate();
   const dataToShow = data?.find((item) => item.name === product) as Product;
+
   return (
     <div className="parent pt-[16px] md:pt-[33px]">
       <button
@@ -21,7 +22,7 @@ export default function ProductDetail() {
         go back
       </button>
       <div className="flex flex-col gap-[88px] md:gap-[120px]">
-        <DetailsTopSection dataToShow={dataToShow} />
+        <DetailsTopSection dataToShow={dataToShow} product={product} />
         <FeaturesAndInTheCart dataToShow={dataToShow} />
         <YouMayAlsoLike dataToShow={dataToShow} />
         <HomePageCategoryList />

@@ -8,8 +8,6 @@ import Person from "./components/Person";
 import Header from "./components/Header";
 import { TuserContext } from "./types/ContextType";
 import ProductDetail from "./pages/ProductDetail";
-import data from "../src/data.json";
-import { Tlist } from "./types/List";
 
 function StaticPerson() {
   const location = useLocation();
@@ -18,12 +16,12 @@ function StaticPerson() {
 export const Context = createContext<TuserContext>({
   yellow: true,
   setYellow: () => {},
-  list: [],
+  list: {},
   setList: () => {},
 });
 function App() {
   const [yellow, setYellow] = useState<boolean>(true);
-  const [list, setList] = useState<Tlist[]>([]);
+  const [list, setList] = useState({});
   return (
     <Context.Provider value={{ yellow, setYellow, list, setList }}>
       <BrowserRouter>
