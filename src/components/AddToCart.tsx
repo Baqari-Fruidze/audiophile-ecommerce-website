@@ -3,6 +3,7 @@ import { Product } from "../types/SingleObjType";
 import { useContext } from "react";
 import { Context } from "../App";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function AddToCart({
   dataToShow,
@@ -16,6 +17,10 @@ export default function AddToCart({
   const byuItem = () => {
     setList((prev) => ({ ...prev, [product]: count }));
   };
+  useEffect(() => {
+    Object.keys(list).length > 0 &&
+      localStorage.setItem("buyList", JSON.stringify(list));
+  }, [list]);
   console.log(list);
   return (
     <div className="flex flex-col gap-[31px]">
