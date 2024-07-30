@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../App";
 import BoughtItems from "./BoughtItems";
+import Total from "./Total";
 
 export default function Summary() {
   return (
@@ -9,6 +10,7 @@ export default function Summary() {
         summary
       </h1>
       <BoughtItems />
+      <Total />
     </div>
   );
 }

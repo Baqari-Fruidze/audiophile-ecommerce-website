@@ -4,14 +4,18 @@ import data from "../data.json";
 
 export default function Total() {
   const { list } = useContext(Context);
-  const names = Object.keys(list);
-
+  const names = Object.entries(list);
+  const number = names.reduce((acc, el) => {
+    console.log(data.filter((item) => el[0] === item.name));
+    return data.filter((item) => el[0] === item.name)[0].price * el[1] + acc;
+  }, 0);
+  console.log(names);
   return (
     <div className="flex flex-col gap-[31px]">
       <div className="flex flex-col gap-[8px]">
         <div className="flex justify-between items-center">
           <span>TOTAL</span>
-          <span></span>
+          <span>{number}</span>
         </div>
         <div className="flex justify-between items-center">
           <span>SHIPPING</span>
