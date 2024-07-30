@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] md:px-[40px] md:pb-[46px] md:items-start md:gap-[1px]">
       <hr className="w-[101px] h-[4px] bg-[#D87D4A] " />
-      <div className=" audiophileCon w-full flex flex-col gap-[48px] md:gap-[32px] md:mb-[32px] ">
+      <div className=" audiophileCon items-center w-full flex flex-col gap-[48px] md:gap-[32px] md:mb-[32px] ">
         <svg
           width="143"
           height="25"

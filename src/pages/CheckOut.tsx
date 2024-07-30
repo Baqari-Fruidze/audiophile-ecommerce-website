@@ -22,7 +22,7 @@ export default function CheckOut() {
           Go Back
         </Link>
         <form onSubmit={handleSubmit(foo)}>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-[32px]">
             <div className="inputsCon mt-[24px] bg-[#fff] pt-[24px] pb-[32px] px-[24px] md:py-[30px] md:px-[28px]">
               <h1 className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase mb-[32px] md:mb-[41px] md:text-[31px] md:leading-[36px] md:tracking-[1.1143px]">
                 CHECKOUT
