@@ -5,7 +5,6 @@ import data from "../data.json";
 export default function BoughtItems() {
   const { list } = useContext(Context);
   const dataToMap = Object.entries(list);
-  console.log(dataToMap);
   return (
     <div className="flex flex-col gap-[24px] ">
       {dataToMap.map((el, index) => {

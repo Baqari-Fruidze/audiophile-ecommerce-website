@@ -8,16 +8,15 @@ import Summary from "../components/Summary";
 import BillingDetails from "../components/BillingDetails";
 import ShippingInfto from "../components/ShippingInfto";
 import PaymentDetails from "../components/PaymentDetails";
+import FinalOrder from "../components/FinalOrder";
 
 export default function CheckOut() {
   const methods = useForm({ resolver: yupResolver(schema) });
   const { handleSubmit } = methods;
-  const foo = (data) => {
-    console.log(data);
-  };
+  const foo = () => {};
   return (
     <FormProvider {...methods}>
-      <div className="parent pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px]">
+      <div className="parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px]">
         <Link className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 ">
           Go Back
         </Link>
@@ -34,6 +33,7 @@ export default function CheckOut() {
             <Summary />
           </div>
         </form>
+        <FinalOrder />
       </div>
     </FormProvider>
   );
