@@ -14,11 +14,7 @@ export default function BoughtItems() {
               <div className="bg-[ #F1F1F] rounded-[8px] w-[64px] h-[64px] flex items-center justify-center">
                 <img
                   src={
-                    data[0].CartImages
-                      ? data[0].CartImages.find(
-                          (item) => Object.keys(item)[0] === el[0]
-                        )[el[0]]
-                      : ""
+                    data[0].CartImages?.find((item) => el[0] === item.name)?.src
                   }
                   alt=""
                 />
@@ -42,3 +38,9 @@ export default function BoughtItems() {
     </div>
   );
 }
+
+// data[0].CartImages
+// ? data[0].CartImages.find(
+//     (item) => Object.keys(item)[0] === el[0]
+//   )[el[0]]
+// : ""

@@ -1,12 +1,17 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Context } from "../App";
 import data from "../data.json";
+import { Product } from "../types/SingleObjType";
 
 export default function Total() {
   const { list } = useContext(Context);
   const names = Object.entries(list);
   const number = names.reduce((acc, el) => {
-    return data.filter((item) => el[0] === item.name)[0].price * el[1] + acc;
+    return (
+      (data.filter((item) => el[0] === item.name) as Product[])[0].price *
+        el[1] +
+      acc
+    );
   }, 0);
   const vat = number * 0.2;
   const roundedVat = vat.toFixed(2);

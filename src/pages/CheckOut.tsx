@@ -1,25 +1,41 @@
-import React from "react";
-import { SubmitHandler } from "react-hook-form";
+import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useForm, FormProvider, useFormContext } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { useForm, FormProvider } from "react-hook-form";
 import { schema } from "../schema/Yup";
 import Summary from "../components/Summary";
 import BillingDetails from "../components/BillingDetails";
 import ShippingInfto from "../components/ShippingInfto";
 import PaymentDetails from "../components/PaymentDetails";
 import FinalOrder from "../components/FinalOrder";
+import { useNavigate } from "react-router-dom";
 
 export default function CheckOut() {
+  const navigate = useNavigate();
+  const [showList, setShowList] = useState<boolean>(true);
   const methods = useForm({ resolver: yupResolver(schema) });
-  const { handleSubmit } = methods;
-  const foo = () => {};
+  const {
+    handleSubmit,
+    formState: { errors },
+  } = methods;
+  console.log(errors);
+  const foo = () => {
+    console.log(errors);
+    if (errors) {
+      setShowList(true);
+    }
+  };
+
   return (
     <FormProvider {...methods}>
-      <div className="parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px]">
-        <Link className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 ">
+      <div
+        className={`parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px] relative  `}
+      >
+        <button
+          className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 "
+          onClick={() => navigate(-1)}
+        >
           Go Back
-        </Link>
+        </button>
         <form onSubmit={handleSubmit(foo)}>
           <div className="flex flex-col gap-[32px]">
             <div className="inputsCon mt-[24px] bg-[#fff] pt-[24px] pb-[32px] px-[24px] md:py-[30px] md:px-[28px]">
@@ -33,7 +49,7 @@ export default function CheckOut() {
             <Summary />
           </div>
         </form>
-        <FinalOrder />
+        {showList ? <FinalOrder /> : null}
       </div>
     </FormProvider>
   );

@@ -1,12 +1,6 @@
 import { createContext, useState } from "react";
 import Home from "./pages/Home";
-import {
-  Route,
-  BrowserRouter,
-  Routes,
-  useLocation,
-  json,
-} from "react-router-dom";
+import { Route, BrowserRouter, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Category from "./pages/Category";
 import CheckOut from "./pages/CheckOut";

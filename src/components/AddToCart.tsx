@@ -10,18 +10,17 @@ export default function AddToCart({
   product,
 }: {
   dataToShow: Product;
-  product: string;
+  product: string | undefined;
 }) {
   const { list, setList } = useContext(Context);
   const [count, setCount] = useState<number>(1);
   const byuItem = () => {
-    setList((prev) => ({ ...prev, [product]: count }));
+    setList((prev) => ({ ...prev, [product as string]: count }));
   };
   useEffect(() => {
     Object.keys(list).length > 0 &&
       localStorage.setItem("buyList", JSON.stringify(list));
   }, [list]);
-  console.log(list);
   return (
     <div className="flex flex-col gap-[31px]">
       <span className="text-[#000] text-[18px] font-bold tracking-[1.286px]">

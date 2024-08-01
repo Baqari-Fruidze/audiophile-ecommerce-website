@@ -8,7 +8,7 @@ export default function DetailsTopSection({
   product,
 }: {
   dataToShow: Product;
-  product: string;
+  product: string | undefined;
 }) {
   const mobile = useMediaQuery("only screen and (max-width : 768px)");
   const tablet = useMediaQuery(
