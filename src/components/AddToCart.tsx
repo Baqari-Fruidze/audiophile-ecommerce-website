@@ -18,6 +18,7 @@ export default function AddToCart({
     setList((prev) => ({ ...prev, [product as string]: count }));
   };
   useEffect(() => {
+    console.log("test");
     Object.keys(list).length > 0 &&
       localStorage.setItem("buyList", JSON.stringify(list));
   }, [list]);

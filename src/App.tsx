@@ -19,8 +19,14 @@ export const Context = createContext<TuserContext>({
   setYellow: () => {},
   list: {},
   setList: () => {},
+  burgerShow: false,
+  setBurgerShow: () => {},
+  setCartShow: () => {},
+  cartShow: false,
 });
 function App() {
+  const [cartShow, setCartShow] = useState<boolean>(false);
+  const [burgerShow, setBurgerShow] = useState<boolean>(false);
   const [yellow, setYellow] = useState<boolean>(true);
   const [list, setList] = useState({});
   useEffect(() => {
@@ -32,7 +38,18 @@ function App() {
   }, []);
 
   return (
-    <Context.Provider value={{ yellow, setYellow, list, setList }}>
+    <Context.Provider
+      value={{
+        yellow,
+        setYellow,
+        list,
+        setList,
+        burgerShow,
+        setBurgerShow,
+        cartShow,
+        setCartShow,
+      }}
+    >
       <BrowserRouter>
         <Header />
         <Routes>

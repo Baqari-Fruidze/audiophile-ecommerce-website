@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../App";
 
 export default function Header() {
+  const { setBurgerShow, burgerShow } = useContext(Context);
   return (
     <div className="bg-[#000] ">
       <hr className="absolute top-[95px] border-[1px] border-solid border-[white] w-full opacity-[0.104]" />
       <div className="py-[37px] px-[24px] flex justify-between items-center">
-        <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="16"
+          height="15"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={() => setBurgerShow(!burgerShow)}
+        >
           <g fill="#FFF" fill-rule="evenodd">
             <path d="M0 0h16v3H0zM0 6h16v3H0zM0 12h16v3H0z" />
           </g>

@@ -28,7 +28,6 @@ export default function BoughtItems() {
                 </span>
               </div>
             </div>
-
             <span className="text-[15px] text-[#000] font-bold opacity-50 mt-[8px]">
               x{el[1]}
             </span>

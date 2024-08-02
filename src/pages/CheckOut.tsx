@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function CheckOut() {
   const navigate = useNavigate();
-  const [showList, setShowList] = useState<boolean>(true);
+  const [showList, setShowList] = useState<boolean>(false);
   const methods = useForm({ resolver: yupResolver(schema) });
   const {
     handleSubmit,

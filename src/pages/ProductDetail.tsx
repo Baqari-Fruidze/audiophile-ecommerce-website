@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import data from "../data.json";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -7,14 +7,18 @@ import DetailsTopSection from "../components/DetailsTopSection";
 import FeaturesAndInTheCart from "../components/FeaturesAndInTheCart";
 import YouMayAlsoLike from "../components/YouMayAlsoLike";
 import { Product } from "../types/SingleObjType";
+import { Context } from "../App";
+import Cart from "../components/Cart";
 
 export default function ProductDetail() {
+  const { cartShow } = useContext(Context);
   const { product } = useParams();
   const navigate = useNavigate();
   const dataToShow = data?.find((item) => item.name === product) as Product;
 
   return (
     <div className="parent pt-[16px] md:pt-[33px]">
+      {cartShow ? <Cart /> : null}
       <button
         onClick={() => navigate(-1)}
         className="text-[#000] text-[15px] font-normal opacity-50 ml-[24px] mb-[24px] md:ml-[40px]"

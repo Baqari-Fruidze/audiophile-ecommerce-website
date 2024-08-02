@@ -1,5 +1,4 @@
 import React from "react";
-import { Context } from "../App";
 
 export default function Circle({
   yellow,

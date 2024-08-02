@@ -25,7 +25,10 @@ export default function HomeYX1Earphones() {
         <h1 className="text-[28px] text-[#000] font-bold tracking-[2px] uppercase mb-[32px]">
           YX1 EARPHONES
         </h1>
-        <Link className="text-[#000] text-[13px] font-bold tracking-[1px] uppercase py-[14px] px-[31px] border-[1px] border-solid border-[#000] ">
+        <Link
+          to={"/earphones/YX1 Wireless Earphones"}
+          className="text-[#000] text-[13px] font-bold tracking-[1px] uppercase py-[14px] px-[31px] border-[1px] border-solid border-[#000] "
+        >
           See Product
         </Link>
       </div>

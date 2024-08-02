@@ -14,7 +14,10 @@ export default function HomeStaticBlackBackground() {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
-      <Link className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]">
+      <Link
+        to={"/headphones/XX99 Mark II Headphones"}
+        className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]"
+      >
         see product
       </Link>
     </div>
