@@ -9,15 +9,17 @@ import YouMayAlsoLike from "../components/YouMayAlsoLike";
 import { Product } from "../types/SingleObjType";
 import { Context } from "../App";
 import Cart from "../components/Cart";
+import Burger from "../components/Burger";
 
 export default function ProductDetail() {
-  const { cartShow } = useContext(Context);
+  const { cartShow, burgerShow } = useContext(Context);
   const { product } = useParams();
   const navigate = useNavigate();
   const dataToShow = data?.find((item) => item.name === product) as Product;
 
   return (
     <div className="parent pt-[16px] md:pt-[33px]">
+      {burgerShow ? <Burger /> : null}
       {cartShow ? <Cart /> : null}
       <button
         onClick={() => navigate(-1)}

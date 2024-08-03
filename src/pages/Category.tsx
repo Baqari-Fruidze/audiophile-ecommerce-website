@@ -7,9 +7,10 @@ import HomePageCategoryList from "../components/HomePageCategoryList";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { Context } from "../App";
 import Cart from "../components/Cart";
+import Burger from "../components/Burger";
 
 export default function Category() {
-  const { cartShow } = useContext(Context);
+  const { cartShow, burgerShow } = useContext(Context);
   const { category } = useParams();
   const dataToMap = data.filter((el) => el.category === category).reverse();
   const mobile = useMediaQuery("only screen and (max-width : 768px)");
@@ -19,6 +20,7 @@ export default function Category() {
 
   return (
     <div>
+      {burgerShow ? <Burger /> : null}
       {cartShow ? <Cart /> : null}
       <HeaderCategory category={category} />
       <div className="bg-[#FAFAFA] pt-[64px] pb-[120px] px-[24px] flex flex-col gap-[120px] md:pt-[120px] md:px-[40px]">

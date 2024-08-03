@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, FormProvider } from "react-hook-form";
 import { schema } from "../schema/Yup";
@@ -8,8 +8,11 @@ import ShippingInfto from "../components/ShippingInfto";
 import PaymentDetails from "../components/PaymentDetails";
 import FinalOrder from "../components/FinalOrder";
 import { useNavigate } from "react-router-dom";
+import Burger from "../components/Burger";
+import { Context } from "../App";
 
 export default function CheckOut() {
+  const { burgerShow } = useContext(Context);
   const navigate = useNavigate();
   const [showList, setShowList] = useState<boolean>(false);
   const methods = useForm({ resolver: yupResolver(schema) });
@@ -17,9 +20,8 @@ export default function CheckOut() {
     handleSubmit,
     formState: { errors },
   } = methods;
-  console.log(errors);
+
   const foo = () => {
-    console.log(errors);
     if (errors) {
       setShowList(true);
     }
@@ -30,6 +32,7 @@ export default function CheckOut() {
       <div
         className={`parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px] relative  `}
       >
+        {burgerShow ? <Burger /> : null}
         <button
           className="text-[#000] text-[15px] font-light leading-[25px] opacity-50 "
           onClick={() => navigate(-1)}
