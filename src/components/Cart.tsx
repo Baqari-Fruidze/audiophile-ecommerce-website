@@ -1,9 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../App";
 import data from "../data.json";
 import { Product } from "../types/SingleObjType";
+import { useNavigate } from "react-router-dom";
 
 export default function BoughtItems() {
+  const navigate = useNavigate();
   const { list, setList } = useContext(Context);
   const dataToMap = Object.entries(list);
   let names;
@@ -29,8 +31,8 @@ export default function BoughtItems() {
   }, [list]);
 
   return (
-    <div className="fixed w-screen min-h-screen bg-[rgba(0,0,0,0.4)] flex justify-center items-center z-20 top-[100px] left-0">
-      <div className=" flex flex-col gap-[31px] w-[90%] rounded-[8px] bg-[#fff] py-[32px] px-[28px] mt-[-450px]">
+    <div className="fixed w-screen min-h-screen bg-[rgba(0,0,0,0.4)] flex justify-center items-center z-20 top-[100px] left-0 md:justify-end">
+      <div className=" flex flex-col gap-[31px] w-[90%] rounded-[8px] bg-[#fff] py-[32px] px-[28px] mt-[-380px] md:w-1/2 md:mr-[50px] ">
         <div className="flex justify-between">
           <span className="text-[18px] text-[#000] font-bold tracking-[1.286] uppercase">
             cart({length})
@@ -99,7 +101,10 @@ export default function BoughtItems() {
               ${grandtotal}
             </span>
           </div>
-          <button className="bg-[#D87D4A] py-[15px] text-[13px] text-[#fff] tracking-[1px] uppercase font-bold">
+          <button
+            className="bg-[#D87D4A] py-[15px] text-[13px] text-[#fff] tracking-[1px] uppercase font-bold"
+            onClick={() => navigate("/checkout")}
+          >
             checkout
           </button>
         </div>

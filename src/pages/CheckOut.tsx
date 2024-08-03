@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, FormProvider } from "react-hook-form";
 import { schema } from "../schema/Yup";
@@ -12,9 +12,9 @@ import Burger from "../components/Burger";
 import { Context } from "../App";
 
 export default function CheckOut() {
-  const { burgerShow } = useContext(Context);
+  const { burgerShow, showList, setShowList } = useContext(Context);
   const navigate = useNavigate();
-  const [showList, setShowList] = useState<boolean>(false);
+
   const methods = useForm({ resolver: yupResolver(schema) });
   const {
     handleSubmit,

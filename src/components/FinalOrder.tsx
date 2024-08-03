@@ -2,9 +2,18 @@ import { useContext } from "react";
 import { Context } from "../App";
 import data from "../data.json";
 import { Product } from "../types/SingleObjType";
+import { useNavigate } from "react-router-dom";
 
 export default function FinalOrder() {
-  const { list } = useContext(Context);
+  function foo2() {
+    navigate("/home");
+    setList({});
+    setShowList((prev) => !prev);
+    setCartShow(false);
+    localStorage.removeItem("buyList");
+  }
+  const navigate = useNavigate();
+  const { list, setList, setShowList, setCartShow } = useContext(Context);
   let src;
   let names;
   let singleItem: string | undefined;
@@ -31,13 +40,13 @@ export default function FinalOrder() {
   }
 
   return (
-    <div className="min-w-screen min-h-screen bg-[rgba(0,0,0,0.4)]  fixed top-0 left-0  flex items-center ">
-      <div className="p-[32px] bg-[#FFF] rounded-[8px]   ">
+    <div className="w-full min-h-screen bg-[rgba(0,0,0,0.4)]  fixed top-0 left-0  flex items-center justify-center  px-[24px] md:px-[114px]">
+      <div className="p-[32px] bg-[#FFF] rounded-[8px] md:p-[48px] md:w-full  ">
         <svg
           width="64"
           height="64"
           xmlns="http://www.w3.org/2000/svg"
-          className="mb-[23px]"
+          className="mb-[23px]  md:mb-[32px]"
         >
           <g fill="none" fill-rule="evenodd">
             <circle fill="#D87D4A" cx="32" cy="32" r="32" />
@@ -48,17 +57,17 @@ export default function FinalOrder() {
             />
           </g>
         </svg>
-        <p className="text-[24px] text-[#000] font-bold tracking-[0.857px] leading-[28px] ">
+        <p className="text-[24px] text-[#000] font-bold tracking-[0.857px] leading-[28px] md:text-[32px] md:tracking-[1.13px] md:leading-[36px]">
           THANK YOU
         </p>
-        <p className="text-[24px] text-[#000] font-bold tracking-[0.857px] leading-[28px] mb-[16px]">
+        <p className="text-[24px] text-[#000] font-bold tracking-[0.857px] leading-[28px] mb-[16px] md:text-[32px] md:tracking-[1.13px] md:leading-[36px] md:mb-[24px]">
           FOR YOUR ORDER
         </p>
         <p className="text-[15px] text-[#000] font-normal opacity-50 mb-[24px]">
           You will receive an email confirmation shortly.
         </p>
-        <div className="flex flex-col mb-[23px]">
-          <div className="bg-[#F1F1F1] p-[24px] flex flex-col gap-[25px] rounded-[8px]">
+        <div className="flex flex-col mb-[23px] md:flex-row md:w-full">
+          <div className="bg-[#F1F1F1] p-[24px] flex flex-col gap-[25px] rounded-[8px] md:w-full">
             <div className="flex justify-between relative">
               <div className="flex gap-[27px] ">
                 <div className="flex justify-center items-center">
@@ -78,13 +87,13 @@ export default function FinalOrder() {
               </span>
               <hr className="bg-[#000] text-[#000] h-[1px] w-full absolute bottom-[-30%] opacity-[0.08] " />
             </div>
-            <div className="flex items-center justify-center ">
+            <div className="flex items-center justify-center  ">
               <span className="text-[12px] text-[#000] font-bold opacity-45 tracking-[-0.214px]">
                 and {count} other item(s)
               </span>
             </div>
           </div>
-          <div className="bg-[#000] flex flex-col gap-[8px] py-[17px] pl-[24px]">
+          <div className="bg-[#000] flex flex-col justify-center gap-[8px] py-[17px] pl-[24px] md:w-full">
             <p className="text-[15px] text-[#fff] font-normal opacity-50 leading-[25px]">
               grand total
             </p>
@@ -93,7 +102,10 @@ export default function FinalOrder() {
             </p>
           </div>
         </div>
-        <button className="bg-[#D87D4A] text-[#fff] text-[13px] font-bold py-[15px] tracking-[1px] px-[52px] w-full">
+        <button
+          className="bg-[#D87D4A] text-[#fff] text-[13px] font-bold py-[15px] tracking-[1px] px-[52px] w-full"
+          onClick={foo2}
+        >
           BACK TO HOME
         </button>
       </div>

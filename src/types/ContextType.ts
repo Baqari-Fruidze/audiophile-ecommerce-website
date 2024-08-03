@@ -7,4 +7,6 @@ export interface TuserContext {
   setBurgerShow: React.Dispatch<React.SetStateAction<boolean>>;
   cartShow: boolean;
   setCartShow: React.Dispatch<React.SetStateAction<boolean>>;
+  showList: boolean;
+  setShowList: React.Dispatch<React.SetStateAction<boolean>>;
 }

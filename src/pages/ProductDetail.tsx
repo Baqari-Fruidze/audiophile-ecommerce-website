@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import data from "../data.json";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";

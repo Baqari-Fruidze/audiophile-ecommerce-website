@@ -23,8 +23,11 @@ export const Context = createContext<TuserContext>({
   setBurgerShow: () => {},
   setCartShow: () => {},
   cartShow: false,
+  setShowList: () => {},
+  showList: false,
 });
 function App() {
+  const [showList, setShowList] = useState<boolean>(false);
   const [cartShow, setCartShow] = useState<boolean>(false);
   const [burgerShow, setBurgerShow] = useState<boolean>(false);
   const [yellow, setYellow] = useState<boolean>(true);
@@ -48,6 +51,8 @@ function App() {
         setBurgerShow,
         cartShow,
         setCartShow,
+        showList,
+        setShowList,
       }}
     >
       <BrowserRouter>
