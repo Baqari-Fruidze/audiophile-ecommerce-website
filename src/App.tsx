@@ -9,6 +9,8 @@ import Header from "./components/Header";
 import { TuserContext } from "./types/ContextType";
 import ProductDetail from "./pages/ProductDetail";
 import { useEffect } from "react";
+import { useMediaQuery } from "@uidotdev/usehooks";
+import LargeHeader from "./components/LargeHeader";
 
 function StaticPerson() {
   const location = useLocation();
@@ -27,6 +29,7 @@ export const Context = createContext<TuserContext>({
   showList: false,
 });
 function App() {
+  const desktop = useMediaQuery("only screen and (min-width : 1440px)");
   const [showList, setShowList] = useState<boolean>(false);
   const [cartShow, setCartShow] = useState<boolean>(false);
   const [burgerShow, setBurgerShow] = useState<boolean>(false);
@@ -56,7 +59,7 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <Header />
+        {desktop ? <LargeHeader /> : <Header />}
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/:category" element={<Category />} />

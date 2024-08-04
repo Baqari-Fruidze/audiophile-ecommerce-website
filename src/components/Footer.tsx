@@ -18,7 +18,7 @@ export default function Footer() {
           width="143"
           height="25"
           xmlns="http://www.w3.org/2000/svg"
-          className="mt-[48px] md:mt-[56px]"
+          className="mt-[48px] md:mt-[56px] md:self-start"
           onClick={foo1}
         >
           <path
