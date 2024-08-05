@@ -1,7 +1,7 @@
-import React from "react";
 import { Product } from "../types/SingleObjType";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import data from "../data.json";
 
 export default function YouMayAlsoLike({
   dataToShow,
@@ -39,7 +39,12 @@ export default function YouMayAlsoLike({
               <p className="text-[24px] text-[#000] font-bold tracking-[1.714px] text-center">
                 {el.name}
               </p>
-              <Link className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold px-[31px] py-[14px] tracking-[1px]">
+              <Link
+                to={`/ ${
+                  data.find((item) => el.name === item.name)?.category
+                }/ ${el.name}`}
+                className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold px-[31px] py-[14px] tracking-[1px]"
+              >
                 see product
               </Link>
             </div>

@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-import { Context } from "../App";
 import BoughtItems from "./BoughtItems";
 import Total from "./Total";
 

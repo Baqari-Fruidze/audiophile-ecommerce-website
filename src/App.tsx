@@ -61,7 +61,7 @@ function App() {
       <BrowserRouter>
         {desktop ? <LargeHeader /> : <Header />}
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/:category" element={<Category />} />
           <Route path="/:category/:product" element={<ProductDetail />} />
           <Route path="/checkout" element={<CheckOut />} />

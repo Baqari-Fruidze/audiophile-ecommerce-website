@@ -1,4 +1,3 @@
-import React from "react";
 import data from "../data.json";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -8,7 +7,7 @@ export default function HomePageCategoryList() {
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="parent flex flex-col  items-center px-[24px] gap-[80px] mb-[120px] mt-[70px] md:flex-row md:px-[40px] md:gap-[2%] md:mb-[96px] md:mt-[80px] ">
+    <div className="parent flex flex-col  items-center px-[24px] gap-[80px] mb-[120px] mt-[70px] md:flex-row md:px-[40px] md:gap-[2%] md:mb-[96px] md:mt-[80px] des:mt-[210px] des:px-[165px] des:mb-[115px]">
       {
         <>
           {data[data.length - 1].info?.map((item, index) => {
@@ -23,7 +22,7 @@ export default function HomePageCategoryList() {
                   style={{
                     width: item.size.width,
                     height: item.size.height,
-                    marginTop: mobile ? "-10%" : tablet ? "-20%" : "-30%",
+                    marginTop: mobile ? "-10%" : tablet ? "-20%" : "-13%",
                   }}
                 />
                 <h1 className="text-[#000] text-[15px] font-bold tracking-[1.071px] uppercase mb-[15px]">

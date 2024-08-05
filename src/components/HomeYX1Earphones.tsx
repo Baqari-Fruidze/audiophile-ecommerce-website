@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
@@ -21,7 +20,7 @@ export default function HomeYX1Earphones() {
         alt=""
         className="rounded-[8px] w-full md:w-[50%]"
       />
-      <div className="bg-[#F1F1F1] py-[41px] pl-[24px] w-full rounded-[8px] md:py-[101px] md:pl-[42px]">
+      <div className="bg-[#F1F1F1] py-[41px] pl-[24px] w-full rounded-[8px] md:py-[101px] md:pl-[42px] des:pl-[96px]">
         <h1 className="text-[28px] text-[#000] font-bold tracking-[2px] uppercase mb-[32px]">
           YX1 EARPHONES
         </h1>

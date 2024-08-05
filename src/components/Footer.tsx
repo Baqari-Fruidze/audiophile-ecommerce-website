@@ -7,18 +7,18 @@ export default function Footer() {
   const { setCartShow } = useContext(Context);
   const navigate = useNavigate();
   function foo1() {
-    navigate("/home");
+    navigate("/");
     setCartShow(false);
   }
   return (
-    <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] md:px-[40px] md:pb-[46px] md:items-start md:gap-[1px]">
+    <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] md:px-[40px] md:pb-[46px] md:items-start md:gap-[1px] des:px-[165px]">
       <hr className="w-[101px] h-[4px] bg-[#D87D4A] " />
       <div className=" audiophileCon items-center w-full flex flex-col gap-[48px] md:gap-[32px] md:mb-[32px] ">
         <svg
           width="143"
           height="25"
           xmlns="http://www.w3.org/2000/svg"
-          className="mt-[48px] md:mt-[56px] md:self-start"
+          className="mt-[48px] md:mt-[56px] md:self-start des:mt-[72px]"
           onClick={foo1}
         >
           <path
@@ -29,7 +29,7 @@ export default function Footer() {
         </svg>
         <div className="items w-full flex flex-col gap-[16px] items-center md:flex-row md:gap-[5%]">
           <Link
-            to={`/home`}
+            to={`/`}
             className={`linksFooter`}
             onClick={() => setCartShow(false)}
           >
