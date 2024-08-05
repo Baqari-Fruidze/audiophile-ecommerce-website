@@ -29,7 +29,7 @@ export default function Homezx9Speaker() {
         </p>
         <Link
           to={"/speakers/ZX9 Speaker"}
-          className="bg-[#000] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]"
+          className="bg-[#000] hover:bg-[#4C4C4C] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]"
         >
           See Product
         </Link>

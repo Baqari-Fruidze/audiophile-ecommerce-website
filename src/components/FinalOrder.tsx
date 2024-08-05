@@ -42,8 +42,8 @@ export default function FinalOrder() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-[rgba(0,0,0,0.4)]  fixed top-0 left-0  flex items-center justify-center  px-[24px] md:px-[114px]">
-      <div className="p-[32px] bg-[#FFF] rounded-[8px] md:p-[48px] md:w-full  ">
+    <div className="w-full min-h-screen bg-[rgba(0,0,0,0.4)]  fixed top-0 left-0  flex items-center justify-center  px-[24px] md:px-[114px] ">
+      <div className="p-[32px] bg-[#FFF] rounded-[8px] md:p-[48px] md:w-full des:w-[540px]  ">
         <svg
           width="64"
           height="64"

@@ -23,6 +23,9 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+.linksFooter:hover {
+  color: #d87d4a;
+}
 .HTwoInCheckout {
   color: #d87d4a;
   font-family: Manrope;

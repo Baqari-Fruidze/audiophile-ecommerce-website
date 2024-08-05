@@ -30,7 +30,7 @@ export default function CheckOut() {
   return (
     <FormProvider {...methods}>
       <div
-        className={`parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px] relative  `}
+        className={`parent mb-[97px] pt-[16px] pb-[32px] px-[24px] md:pt-[48px] md:px-[40px] md:mb-[116px] relative des:px-[165px] des:pt-[80px]  `}
       >
         {burgerShow ? <Burger /> : null}
         <button
@@ -40,8 +40,8 @@ export default function CheckOut() {
           Go Back
         </button>
         <form onSubmit={handleSubmit(foo)}>
-          <div className="flex flex-col gap-[32px]">
-            <div className="inputsCon mt-[24px] bg-[#fff] pt-[24px] pb-[32px] px-[24px] md:py-[30px] md:px-[28px]">
+          <div className="flex flex-col gap-[32px] des:flex-row des:gap-[30px] ">
+            <div className="inputsCon mt-[24px] bg-[#fff] pt-[24px] pb-[32px] px-[24px] md:py-[30px] md:px-[28px] des:mt-[38px] des:py-[52px] des:px-[48px]">
               <h1 className="text-[#000] text-[28px] font-bold tracking-[1px] uppercase mb-[32px] md:mb-[41px] md:text-[31px] md:leading-[36px] md:tracking-[1.1143px]">
                 CHECKOUT
               </h1>

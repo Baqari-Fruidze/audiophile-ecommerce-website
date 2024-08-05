@@ -20,7 +20,7 @@ export default function HomeStaticBlackBackground() {
         </p>
         <Link
           to={"/headphones/XX99 Mark II Headphones"}
-          className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]"
+          className="bg-[#D87D4A] hover:bg-[#FBAF85] text-[13px] text-[#fff] font-bold tracking-[1px] uppercase py-[15px] px-[30px]"
         >
           see product
         </Link>

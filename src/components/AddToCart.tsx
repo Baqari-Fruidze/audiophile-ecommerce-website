@@ -1,4 +1,3 @@
-import React from "react";
 import { Product } from "../types/SingleObjType";
 import { useContext } from "react";
 import { Context } from "../App";
@@ -28,7 +27,7 @@ export default function AddToCart({
         ${dataToShow.price * count}
       </span>
       <div className="flex gap-[16px] w-[90%] ">
-        <div className="bg-[#F1F1F1] w-[45%] px-[15px] py-[14px] flex justify-between">
+        <div className="bg-[#F1F1F1]  cursor-pointer w-[45%] px-[15px] py-[14px] flex justify-between">
           <span
             className="text-[13px] text-[#000] font-bold tracking-[1px] opacity-25"
             onClick={() => setCount((prev) => prev - 1)}
@@ -46,7 +45,7 @@ export default function AddToCart({
           </span>
         </div>
         <div
-          className="w-[50%] bg-[#D87D4A] flex items-center justify-center  "
+          className="w-[50%] bg-[#D87D4A] flex items-center justify-center  cursor-pointer "
           onClick={byuItem}
         >
           <span className="text-[#fff] text-[13px] font-bold tracking-[1px] ">

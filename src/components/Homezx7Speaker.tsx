@@ -8,7 +8,7 @@ export default function Homezx7Speaker() {
       </h1>
       <Link
         to={"/speakers/ZX7 Speaker"}
-        className="text-[#000] text-[13px] font-bold tracking-[1px] uppercase py-[14px] px-[31px] border-[1px] border-solid border-[#000]"
+        className="text-[#000]  hover:bg-[#000] hover:text-[#fff] text-[13px] font-bold tracking-[1px] uppercase py-[14px] px-[31px] border-[1px] border-solid border-[#000]"
       >
         See Product
       </Link>
