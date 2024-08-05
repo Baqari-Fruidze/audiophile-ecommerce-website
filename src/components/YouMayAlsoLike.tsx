@@ -40,9 +40,9 @@ export default function YouMayAlsoLike({
                 {el.name}
               </p>
               <Link
-                to={`/ ${
-                  data.find((item) => el.name === item.name)?.category
-                }/ ${el.name}`}
+                to={`/${data.find((item) => el.name === item.name)?.category}/${
+                  el.name
+                }`}
                 className="bg-[#D87D4A] text-[13px] text-[#fff] font-bold px-[31px] py-[14px] tracking-[1px]"
               >
                 see product

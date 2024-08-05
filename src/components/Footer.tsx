@@ -4,11 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { Context } from "../App";
 
 export default function Footer() {
-  const { setCartShow } = useContext(Context);
+  const { setCartShow, scrollToTop } = useContext(Context);
   const navigate = useNavigate();
+  function toTopFromHomeSpan() {
+    setCartShow(false);
+    scrollToTop();
+  }
   function foo1() {
     navigate("/");
     setCartShow(false);
+    scrollToTop();
   }
   return (
     <div className="parent flex flex-col gap-[48px] items-center bg-[#101010] px-[24px] pb-[38px] md:px-[40px] md:pb-[46px] md:items-start md:gap-[1px] des:px-[165px]">
@@ -28,11 +33,7 @@ export default function Footer() {
           />
         </svg>
         <div className="items w-full flex flex-col gap-[16px] items-center md:flex-row md:gap-[5%]">
-          <Link
-            to={`/`}
-            className={`linksFooter`}
-            onClick={() => setCartShow(false)}
-          >
+          <Link to={`/`} className={`linksFooter`} onClick={toTopFromHomeSpan}>
             Home
           </Link>
           <Link to={`/headphones`} className={`linksFooter`}>

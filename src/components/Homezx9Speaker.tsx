@@ -7,7 +7,7 @@ export default function Homezx9Speaker() {
     "only screen and (min-width : 769px) and (max-width : 1439px)"
   );
   return (
-    <div className="parent bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-cover bg-[center_top_-140px] bg-no-repeat bg-[#D87D4A] rounded-[8px] py-[55px] px-[23px] w-full flex flex-col items-center gap-[32px] md:gap-[64px] md:py-[65px] des:py-[1px] des:pt-[96px] des:flex-row des:px-[120px] overflow-hidden">
+    <div className="parent bg-[url('/assets/home/desktop/pattern-circles.svg')] bg-cover bg-[center_top_-140px] bg-no-repeat bg-[#D87D4A] rounded-[8px] py-[55px] px-[23px] w-full flex flex-col items-center gap-[32px] md:gap-[64px] md:py-[65px] des:py-[1px] des:pt-[96px] des:flex-row des:justify-between des:pl-[120px] des:pr-[180px] overflow-hidden">
       <img
         src={
           mobile

@@ -13,7 +13,7 @@ export default function HomePageCategoryList() {
           {data[data.length - 1].info?.map((item, index) => {
             return (
               <div
-                className="flex flex-col items-center w-full bg-[#F1F1F1] rounded-[8px] pb-[15px]  "
+                className="flex flex-col items-center w-full bg-[#F1F1F1] rounded-[8px] pb-[15px] des:pb-[40px] "
                 key={index}
               >
                 <img

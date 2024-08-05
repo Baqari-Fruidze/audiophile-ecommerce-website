@@ -23,11 +23,18 @@ export default function Category() {
       {burgerShow ? <Burger /> : null}
       {cartShow ? <Cart /> : null}
       <HeaderCategory category={category} />
-      <div className="bg-[#FAFAFA] pt-[64px] pb-[120px] px-[24px] flex flex-col gap-[120px] md:pt-[120px] md:px-[40px]">
+      <div className="bg-[#FAFAFA] pt-[64px] pb-[120px] px-[24px] flex flex-col gap-[120px] md:pt-[120px] md:px-[40px] des:px-[165px] ">
         {dataToMap.map((item, index) => {
           return (
-            <div className="flex flex-col gap-[32px] md:gap-[52px]" key={index}>
-              <div className="bg-[#F1F1F1] rounded-[8px] flex items-center justify-center">
+            <div
+              className="flex flex-col gap-[32px] md:gap-[52px] des:flex-row items-center des:gap-[125px]"
+              key={index}
+            >
+              <div
+                className={`bg-[#F1F1F1] rounded-[8px] flex items-center justify-center ${
+                  index % 2 === 0 ? `des:order-1` : `des:order-2`
+                }`}
+              >
                 <img
                   src={
                     mobile
@@ -40,7 +47,11 @@ export default function Category() {
                   className="rounded-[8px]"
                 />
               </div>
-              <div className="flex flex-col gap-[24px] items-center">
+              <div
+                className={`flex flex-col gap-[24px] items-center }   ${
+                  index % 2 === 0 ? `des:order-2` : `des:order-1`
+                }`}
+              >
                 {item.new ? (
                   <h1 className="text-[#D87D4A] text-[14px] font-normal tracking-[10px] uppercase">
                     NEW PRODUCT

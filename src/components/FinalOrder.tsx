@@ -6,14 +6,16 @@ import { useNavigate } from "react-router-dom";
 
 export default function FinalOrder() {
   function foo2() {
-    navigate("/home");
+    navigate("/");
     setList({});
     setShowList((prev) => !prev);
     setCartShow(false);
     localStorage.removeItem("buyList");
+    scrollToTop();
   }
   const navigate = useNavigate();
-  const { list, setList, setShowList, setCartShow } = useContext(Context);
+  const { list, setList, setShowList, setCartShow, scrollToTop } =
+    useContext(Context);
   let src;
   let names;
   let singleItem: string | undefined;

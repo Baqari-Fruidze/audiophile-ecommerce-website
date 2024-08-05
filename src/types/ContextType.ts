@@ -9,4 +9,5 @@ export interface TuserContext {
   setCartShow: React.Dispatch<React.SetStateAction<boolean>>;
   showList: boolean;
   setShowList: React.Dispatch<React.SetStateAction<boolean>>;
+  scrollToTop: () => void;
 }

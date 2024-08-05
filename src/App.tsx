@@ -27,6 +27,7 @@ export const Context = createContext<TuserContext>({
   cartShow: false,
   setShowList: () => {},
   showList: false,
+  scrollToTop: () => {},
 });
 function App() {
   const desktop = useMediaQuery("only screen and (min-width : 1440px)");
@@ -35,6 +36,12 @@ function App() {
   const [burgerShow, setBurgerShow] = useState<boolean>(false);
   const [yellow, setYellow] = useState<boolean>(true);
   const [list, setList] = useState({});
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   useEffect(() => {
     const data = localStorage.getItem("buyList");
     if (data) {
@@ -56,6 +63,7 @@ function App() {
         setCartShow,
         showList,
         setShowList,
+        scrollToTop,
       }}
     >
       <BrowserRouter>
