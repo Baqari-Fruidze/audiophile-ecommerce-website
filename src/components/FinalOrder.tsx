@@ -105,7 +105,7 @@ export default function FinalOrder() {
           </div>
         </div>
         <button
-          className="bg-[#D87D4A] text-[#fff] text-[13px] font-bold py-[15px] tracking-[1px] px-[52px] w-full"
+          className="bg-[#D87D4A] text-[#fff] text-[13px] font-bold py-[15px] tracking-[1px] px-[52px] w-full des:text-[14px]"
           onClick={foo2}
         >
           BACK TO HOME
