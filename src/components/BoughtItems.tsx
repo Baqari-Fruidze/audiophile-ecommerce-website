@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Context } from "../App";
 import data from "../data.json";
 
@@ -37,9 +37,3 @@ export default function BoughtItems() {
     </div>
   );
 }
-
-// data[0].CartImages
-// ? data[0].CartImages.find(
-//     (item) => Object.keys(item)[0] === el[0]
-//   )[el[0]]
-// : ""
