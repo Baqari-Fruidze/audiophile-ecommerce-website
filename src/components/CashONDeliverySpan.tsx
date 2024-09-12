@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function CashONDeliverySpan() {
   return (
     <div className="flex items-center gap-[16px] md:w-full mt-[10px]">

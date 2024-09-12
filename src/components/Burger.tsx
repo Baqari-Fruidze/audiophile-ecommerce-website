@@ -1,4 +1,3 @@
-import React from "react";
 import data from "../data.json";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";

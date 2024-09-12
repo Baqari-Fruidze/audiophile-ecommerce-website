@@ -36,3 +36,4 @@ interface Product {
   gallery: Gallery;
   others: OtherProduct[];
 }
+export default Product;

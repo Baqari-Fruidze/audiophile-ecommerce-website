@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import HomePageCategoryList from "../components/HomePageCategoryList";
 import MiddleSingleProduct from "./MiddleSingleProduct";
 import HomeStaticBlackBackground from "../components/HomeStaticBlackBackground";
